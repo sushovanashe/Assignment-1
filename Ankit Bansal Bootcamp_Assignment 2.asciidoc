@@ -1,0 +1,446 @@
++*In[1]:*+
+[source, ipython3]
+----
+'''1- write a program which takes 2 inputs from the user : weight(kg) and height(meter) and prints the BMI in the output.
+
+BMI = weight / (square of height)'''
+
+weight=float(input("Enter the weight: "))
+height=float(input("Enter the height: "))
+BMI=weight/height**2
+print("Your BMI is: ",BMI)
+----
+
+
++*Out[1]:*+
+----
+Enter the weight: 98
+Enter the height: 1.73
+Your BMI is:  32.74416118146279
+----
+
+
++*In[2]:*+
+[source, ipython3]
+----
+'''2- write a program which takes the name of the user as input and replace all the occurence of character
+'a' in the name to 'b' and print it.'''
+
+name=input("Enter your name: ")
+updated_name=name.replace('a','b')
+print("The updated name: ",updated_name)
+----
+
+
++*Out[2]:*+
+----
+Enter your name: suashavana
+The updated name:  subshbvbnb
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+'''3- write a program which takes 2 inputs from user as principle amount (int) and rate of annual interest (float) 
+and print the expected total amount  after  2 years.
+
+example : principle : 100 , interest percent 10  then amount after 2 years will be : 100*1.1*1.1 = 121'''
+
+principle_amount=int(input("Enter the principle amount: "))
+annual_interest=float(input("Enter the rate of interest: "))
+expected_total_amount=(principle_amount+principle_amount*(annual_interest/100))*2
+print("expected total amount  after  2 years: ",expected_total_amount)
+----
+
+
++*Out[4]:*+
+----
+Enter the principle amount: 100
+Enter the rate of interest: 10
+expected total amount  after  2 years:  220.0
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+'''4- write a program which takes city name from user input. irrespective of in which case user enters the city name, 
+print the city name in camel case meaning first letter should be capital and rest in small.
+
+example : input : MYSORE ,  print - > Mysore '''
+
+city=input("Enter the city name: ")
+print(city.capitalize())
+----
+
+
++*Out[5]:*+
+----
+Enter the city name: delhi
+Delhi
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+'''5- write a program which takes the name of the user as input and print the index of character 'a' in the string. 
+if 'a' is not there then return -1.'''
+
+name=input("Enter your name: ")
+print(name.find('a'))
+----
+
+
++*Out[7]:*+
+----
+Enter your name: xqwerty
+-1
+----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+'''6-  Display the number of letters in the below string
+my_word = "antidisestablishmentarianism"'''
+
+my_word = "antidisestablishmentarianism"
+print(len(my_word))
+----
+
+
++*Out[8]:*+
+----
+28
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+'''7- take 3 inputs from user : first name , last name and age . Display the information in below format
+exmaple 
+first name : MOhit
+last name : sharma 
+age 32
+
+Display : my name is Mohit Sharma and I am 32 years old.
+
+note that first letter of first name and last name both should be in capital letters and rest in small. '''
+
+first_name=input("Enter your first name: ").capitalize()
+last_name=input("Enter your last name: ").capitalize()
+age=int(input("Enter your age: "))
+print("first name: ",first_name)
+print("last name: ",last_name)
+print("age: ",age)
+print("-"*50)
+print("my name is ",first_name,last_name," and I am ",age, "years old")
+----
+
+
++*Out[13]:*+
+----
+Enter your first name: sushovan
+Enter your last name: ashe
+Enter your age: 32
+first name:  Sushovan
+last name:  Ashe
+age:  32
+--------------------------------------------------
+my name is  Sushovan Ashe  and I am  32 years old
+----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+'''8-take 3 inputs from user : first name , last name and company name. create the email alias for the user and display it.  
+Email alias is first 2 letters of first name , last 3 letters of last name and @company.com
+example 
+first name : MOhit
+last name : sharma 
+company : infosys
+
+Display : morma@infosys.com 
+
+note full email id should -be in lower case'''
+
+first_name=input("Enter your first name: ")
+last_name=input("Enter your last name: ")
+company_name=input("Enter your company name: ")
+email=first_name[0:2]+last_name[-3:]
+print(email,"@",company_name,".com")
+----
+
+
++*Out[15]:*+
+----
+Enter your first name: sonu
+Enter your last name: ashe
+Enter your company name: onix
+soshe @ onix .com
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+'''1- write a program which takes single input from user contaning first name,last name and age as comma separated value 
+and display then in 3 lines in given format below.
+
+example user input : Ankit,Bansal,35
+
+output:
+First name is Ankit
+last name is Bansal
+Ankit is 35 years old 
+
+note : do not hardcode name at any place'''
+
+output=input("Enter your first name, last name, age").split(',')
+print("First name is: ",output[0])
+print("Last name is: ",output[1])
+print(output[0], "is",output[2], "years old ")
+
+first_name, last_name, age=input("Enter your first name, last name, age").split(',')
+print("First name is: ",first_name)
+print("Last name is: ",last_name)
+print(first_name, "is",age, "years old ")
+----
+
+
++*Out[3]:*+
+----
+Enter your first name, last name, agesonu,ashe,32
+First name is:  sonu
+Last name is:  ashe
+sonu is 32 years old 
+Enter your first name, last name, agearpana,korde,31
+First name is:  arpana
+Last name is:  korde
+arpana is 31 years old 
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+'''2- given 2 list as list1= [1,3,4] and list2 = [2,4,6]
+
+combined the 2 list and diplay the same without using extend method'''
+
+list1= [1,3,4]
+list2 = [2,4,6]
+combined_list=(list1+list2)
+print(combined_list)
+
+'''list1.extend(list2)
+print(list1)'''
+----
+
+
++*Out[7]:*+
+----
+[1, 3, 4, 2, 4, 6]
+[1, 3, 4, 2, 4, 6]
+----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+'''3- given a list list1=[1,2,3,4,5,6,7,8]
+diplay a new list which contains only odd position index values from above list.'''
+
+list1=[1,2,3,4,5,6,7,8]
+print(list1[1::2])
+----
+
+
++*Out[8]:*+
+----
+[2, 4, 6, 8]
+----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+'''4- ipl= ['CSK','MI','KKR','LSG','PBKS']
+
+take a ipl team name as input from user and display a list of all elements from that name.
+
+example : input : KKR
+output : ['KKR','LSG','PBKS']'''
+
+ipl= ['CSK','MI','KKR','LSG','PBKS']
+
+ipl_exact=input("Enter a ipl team from the above list: ")
+x=ipl.index(ipl_exact)
+print(ipl[x:])
+
+----
+
+
++*Out[15]:*+
+----
+Enter a ipl team from the above list: LSG
+['LSG', 'PBKS']
+----
+
+
++*In[17]:*+
+[source, ipython3]
+----
+'''5- ipl= ['CSK','MI','KKR','LSG','PBKS']
+
+take a ipl team name as input from user and display a list of all elements except input one
+
+example : input : KKR
+output : ['CSK','MI','LSG','PBKS']'''
+
+ipl= ['CSK','MI','KKR','LSG','PBKS']
+
+ipl_exact=input("Enter a ipl team from the above list: ")
+ipl.remove(ipl_exact)
+print(ipl)
+----
+
+
++*Out[17]:*+
+----
+Enter a ipl team from the above list: CSK
+['MI', 'KKR', 'LSG', 'PBKS']
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+'''6- ipl= ['CSK','MI','KKR','LSG','PBKS']
+take a user input contains 2 comma seprated values index,new_team . replace the index element of list 
+with new value and display the same
+
+example : input : 2,SRH
+output : ['CSK','MI','SRH','LSG','PBKS']'''
+
+
+ipl= ['CSK','MI','KKR','LSG','PBKS']
+
+index,team=input("Enter a ipl team and an index to the above list: ").split(',')
+ipl[int(index)]=team
+print(ipl)
+----
+
+
++*Out[5]:*+
+----
+Enter a ipl team and an index to the above list: 3,GT
+['CSK', 'MI', 'KKR', 'GT', 'PBKS']
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+'''7- ipl= ['CSK','MI','KKR','LSG','PBKS']
+take ipl team name as user input. display True if the team exists else display False.'''
+
+ipl= ['CSK','MI','KKR','LSG','PBKS']
+ipl_exact=input("Enter a ipl team: ")
+print(ipl_exact in ipl)
+----
+
+
++*Out[7]:*+
+----
+Enter a ipl team: GT
+False
+----
+
+
++*In[9]:*+
+[source, ipython3]
+----
+'''8-ipl= ['CSK','MI','KKR','LSG','PBKS']
+take a user input contains 2 comma seprated values index,new_team . Add the new value at that index in the list. 
+Display the old list , new list,length of original and new list
+
+example : input : 2,SRH
+output : 
+old list : ['CSK','MI','KKR','LSG','PBKS'] and length 5
+new list : ['CSK','MI','SRH','KKR',LSG','PBKS'] and length 6'''
+
+ipl= ['CSK','MI','KKR','LSG','PBKS']
+print("The old teams: ",ipl,"and the number of teams: ",len(ipl))
+
+index,team=input("Enter an index and insert a new team in that index: ").split(',')
+
+ipl.insert(int(index),team)
+
+
+print("The new teams: ",ipl,"and the number of teams: ",len(ipl))
+
+----
+
+
++*Out[9]:*+
+----
+The old teams:  ['CSK', 'MI', 'KKR', 'LSG', 'PBKS'] and the number of teams:  5
+Enter an index and insert a new team in that index: 2,SRH
+The new teams:  ['CSK', 'MI', 'SRH', 'KKR', 'LSG', 'PBKS'] and the number of teams:  6
+----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+'''9- given a list of numbers, write a program to find the mean of the numbers in list'''
+
+list1= [1,2,3,4,5]
+print(list1)
+mean=sum(list1)/len(list1)
+print(mean)
+----
+
+
++*Out[6]:*+
+----
+[1, 2, 3, 4, 5]
+3.0
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+'''10- create a dictionary to store following attributes of CSK 
+key "CSK" ; attributes : team full name , captain , playing 11 for each match(name of players), 
+oppenont name (assume there are 3 matches only against MI, RCB , GT ) 
+and result won/loss'''
+
+CSK={"full_name":"Chennai Super Kings",
+     "captain":"Mahendra Singh Dhoni",
+     "playing_11":["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", 
+                   "Player 8", "Player 9", "Player 10", "Player 11"],
+    "opponent_name":['MI','RCB','GT'],
+    "result":["Won", "Loss", "Won"]
+    }
+print(CSK)
+----
+
+
++*Out[7]:*+
+----
+{'full_name': 'Chennai Super Kings', 'captain': 'Mahendra Singh Dhoni', 'playing_11': ['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5', 'Player 6', 'Player 7', 'Player 8', 'Player 9', 'Player 10', 'Player 11'], 'opponent_name': ['MI', 'RCB', 'GT'], 'result': ['Won', 'Loss', 'Won']}
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
